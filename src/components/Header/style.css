@@ -24,6 +24,10 @@
 	padding: 0 15px;
 }
 
+.navItem:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+
 .active {
 	background: rgba(0, 0, 0, 0.4);
 }
@@ -35,9 +39,4 @@
 	line-height: 56px;
 	font-weight: 400;
 	color: #FFF;
-}
-
-.header nav a:hover,
-.header nav a:active {
-	background: rgba(0, 0, 0, 0.2);
 }

@@ -1,11 +1,12 @@
-import { h } from "preact";
-import style from "./style";
+import { h, Component } from "preact";
+import View from "./View";
 
-const SpellDictionary = ({ spell }) => (
-  <div class={style.home}>
-    <h1>Spell</h1>
-    <p>This is the Spell component.</p>
-  </div>
-);
+export default class extends Component {
+  constructor() {
+    super();
+  }
 
-export default SpellDictionary;
+  render() {
+    return <View />;
+  }
+}

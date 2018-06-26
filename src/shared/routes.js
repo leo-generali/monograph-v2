@@ -6,4 +6,4 @@ const ROUTES = {
 
 export {
   ROUTES
-}
+};

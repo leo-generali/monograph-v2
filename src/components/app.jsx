@@ -1,11 +1,12 @@
 import { h, Component } from "preact";
+import styles from "./styles";
 
 // Routes
 import { Router } from "preact-router";
 import { ROUTES } from "../shared/routes";
 
-import Header from "./Header/index.jsx";
-import HomePage from "../routes/HomePage/index.jsx";
+import Header from "./Header/index";
+import HomePage from "../routes/HomePage/index";
 import SpellPage from "../routes/SpellPage/index.jsx";
 import SpellDictionary from "../routes/SpellDictionary/index.jsx";
 
@@ -22,11 +23,13 @@ export default class App extends Component {
     return (
       <div id="app">
         <Header />
-        <Router onChange={this.handleRoute}>
-          <HomePage path={ROUTES.HOME} />
-          <SpellDictionary path={ROUTES.TOME} />
-          <SpellPage path={ROUTES.SPELL_PAGE} />
-        </Router>
+        <div class={styles.app}>
+          <Router onChange={this.handleRoute}>
+            <HomePage path={ROUTES.HOME} />
+            <SpellDictionary path={ROUTES.TOME} />
+            <SpellPage path={ROUTES.SPELL_PAGE} />
+          </Router>
+        </div>
       </div>
     );
   }

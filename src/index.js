@@ -1,4 +1,4 @@
 import './style';
-import App from './components/app.jsx';
+import App from './components/app';
 
 export default App;

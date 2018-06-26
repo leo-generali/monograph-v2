@@ -14,7 +14,7 @@ const Header = () => (
         activeClassName={style.active}
         href={ROUTES.HOME}
       >
-        Monograph
+        Monograph 📕
       </Link>
       <div class={style.navGroup}>
         <Link
