@@ -1,8 +1,12 @@
 import { h } from "preact";
 import style from "./style";
 
-const View = () => (
-  <div>This will eventually house all of the spells available;</div>
+import SpellList from "./SpellList";
+
+const View = ({ spells }) => (
+  <div>
+    <SpellList spells={spells} />
+  </div>
 );
 
 export default View;
