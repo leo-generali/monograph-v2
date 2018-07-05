@@ -10,8 +10,11 @@ export default class extends Component {
 
     this.state = {
       spells: [],
-      loading: true
+      loading: true,
+      searchInput: ""
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   loadData(collection) {
@@ -22,11 +25,16 @@ export default class extends Component {
     });
   }
 
+  handleChange(event) {
+    console.log(event.target.value);
+    this.setState({ searchInput: event.target.value });
+  }
+
   componentDidMount() {
     this.loadData("spells");
   }
 
   render() {
-    return <View {...this.state} />;
+    return <View {...this.state} handleChange={this.handleChange} />;
   }
 }

@@ -2,10 +2,12 @@ import { h } from "preact";
 import style from "./style";
 
 import SpellList from "./SpellList";
+import SearchInput from "../../components/SpellDictionary/SearchInput";
 
-const View = ({ spells }) => (
+const View = ({ spells, searchInput, handleChange }) => (
   <div>
-    <SpellList spells={spells} />
+    <SearchInput searchInput={searchInput} handleChange={handleChange} />
+    <SpellList spells={spells} searchInput={searchInput} />
   </div>
 );
 
