@@ -26,7 +26,6 @@ export default class extends Component {
   }
 
   handleChange(event) {
-    console.log(event.target.value);
     this.setState({ searchInput: event.target.value });
   }
 

@@ -6,9 +6,12 @@ import { Router } from "preact-router";
 import { ROUTES } from "../shared/routes";
 
 import Header from "./Header/index";
+
+// Pages
 import HomePage from "../routes/HomePage/index";
 import SpellPage from "../routes/SpellPage/index.jsx";
 import SpellDictionary from "../routes/SpellDictionary/index.jsx";
+import AdminPage from "../routes/AdminPage/index.jsx";
 
 export default class App extends Component {
   /** Gets fired when the route changes.
@@ -28,6 +31,7 @@ export default class App extends Component {
             <HomePage path={ROUTES.HOME} />
             <SpellDictionary path={ROUTES.TOME} />
             <SpellPage path={ROUTES.SPELL_PAGE} />
+            <AdminPage path={ROUTES.ADMIN} />
           </Router>
         </div>
       </div>
